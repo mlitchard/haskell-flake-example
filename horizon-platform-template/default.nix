@@ -53,8 +53,8 @@ let
             (hlib.setBuildTarget legacyPackages.server target));
     in
     if lib.hasPrefix "exe:" target then
-      package.overrideAttrs
-        { meta.mainProgram = lib.removePrefix "exe:" target;}
+      package.overrideAttrs (old: {
+         meta = (old.meta or {}) // { mainProgram = lib.removePrefix "exe:" target;};})
     else
      package;
 in
