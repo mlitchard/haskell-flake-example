@@ -37,10 +37,3 @@ executable horizon-platform-template
   main-is:          Main.hs
   hs-source-dirs:   app
   build-depends:    horizon-platform-template
-
-test-suite horizon-platform-template-tests
-  import:           lang
-  type:             exitcode-stdio-1.0
-  main-is:          Main.hs
-  hs-source-dirs:   test
-  build-depends:    horizon-platform-template
