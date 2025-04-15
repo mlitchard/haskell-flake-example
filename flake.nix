@@ -35,7 +35,7 @@
                 fileset = fs';
               };
 
-          server = import ./server env;
+          server = import ./horizon-platform-template env;
 
         };
         

@@ -20,8 +20,8 @@ source-repository head
   location: <url>
 
 common lang
-  build-depends:    base >=4.20 && <5
-  default-language: GHC2024
+  build-depends:    base
+  default-language: GHC2021
   ghc-options:
     -Weverything -Wno-all-missed-specialisations -Wno-implicit-prelude
     -Wno-missing-safe-haskell-mode -Wno-prepositive-qualified-module

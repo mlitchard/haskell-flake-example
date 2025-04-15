@@ -1,4 +1,4 @@
-{ pkgs, fs, onlyExts-fs, fs2source, lib, lu-pkgs, inputs, system, ... }:
+{ pkgs, fs, onlyExts-fs, fs2source, lib, inputs, system, ... }:
 let
   hlib = pkgs.haskell.lib;
   onlyHaskell = fs2source
@@ -72,7 +72,6 @@ in
   # Define your executable packages
   packages = {
     server = legacyPackages.server;
-    digspot = buildExe "digspot-server";
-    migration = buildExe "migration";
+    example = oneTarget "horizon-platform-template";
   };
 }
