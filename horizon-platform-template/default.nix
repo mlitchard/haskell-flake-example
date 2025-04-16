@@ -72,6 +72,6 @@ in
   # Define your executable packages
   packages = {
     server = legacyPackages.server;
-    example = oneTarget "horizon-platform-template";
+    example = oneTarget "exe:horizon-platform-template";
   };
 }

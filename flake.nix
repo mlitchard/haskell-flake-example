@@ -10,7 +10,10 @@
     flake-utils.url = "github:numtide/flake-utils";
     horizon-devtools.url = "git+https://gitlab.horizon-haskell.net/package-sets/horizon-devtools?ref=lts/ghc-9.8.x";
     horizon-platform.url = "git+https://gitlab.horizon-haskell.net/package-sets/horizon-platform?ref=lts/ghc-9.8.x";
-    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    nixpkgs = 
+      {  url = "github:nixos/nixpkgs/nixpkgs-unstable";
+         follows = "horizon-platform/horizon-advance/nixpkgs";
+      };
   };
 
   outputs = inputs@{ self, nixpkgs, flake-utils, horizon-platform,... }:
